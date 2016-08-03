@@ -18,7 +18,7 @@
  */
 // write your code here
 
-
+var bands = ["Nirvana": "Nevermind", "Blondie": "Parallel Lines", "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -31,7 +31,7 @@
 // write your code here
 
 
-
+bands["Pixies"] = "Doolittle"
 
 
 
@@ -42,6 +42,7 @@
  */
 // write your code here
 
+bands.removeValueForKey("The Kinks")
 
 
 
@@ -56,6 +57,7 @@
 let bandName = "Nirvana"
 // write your code here
 
+print("\(bandName)'s top-selling album was \(bands["Nirvana"]!)")
 
 
 
@@ -68,6 +70,11 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+for (bandName, bestSellingAlbum) in bands {
+    
+    print("\(bandName)'s top selling album was \(bestSellingAlbum)")
+
+}
 
 
 
@@ -79,7 +86,7 @@ let bandName = "Nirvana"
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
 
-
+// String
 
 
 
@@ -90,7 +97,7 @@ let bandName = "Nirvana"
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
 
-
+// fuck school
 
 
 
@@ -108,7 +115,7 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+let grades = [ 9: "B", 10 : "A", 11 : "C", 12 : "B"]
 
 
 
@@ -120,7 +127,11 @@ let bandName = "Nirvana"
 // write your code here
 
 
+for (grade, result) in grades {
 
+    print("Grade \(grade) got \(result)")
+    
+}
 
 
 
@@ -131,7 +142,15 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+for (grade, result) in grades {
+    
+    if result == "A" {
+        
+        print("Grade \(grade) got the highest score with \(result)! ")
 
+    }
+    
+}
 
 
 
