@@ -18,7 +18,10 @@
  */
 // write your code here
 
-
+var bands = ["Nirvana":"Nevermind",
+             "Blondie":"Parallel Lines",
+             "The Kinks":"Low Budget",
+             "The Beatles":"Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -30,7 +33,8 @@
  */
 // write your code here
 
-
+bands["Pixie"] = "Doolittle"
+print(bands)
 
 
 
@@ -42,7 +46,8 @@
  */
 // write your code here
 
-
+bands["The Kinks"] = nil
+print(bands)
 
 
 
@@ -56,8 +61,11 @@
 let bandName = "Nirvana"
 // write your code here
 
+let album = bands[bandName]
+if let album = album{
 
-
+print("\(bandName)'s top-selling album was \(album)")
+}
 
 
 
@@ -69,7 +77,11 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+for (key, value) in bands{
+    
+    print("\(key)'s top-selling album was \(value)")
+    
+}
 
 
 
@@ -80,7 +92,7 @@ let bandName = "Nirvana"
  */
 
 
-
+//tuple
 
 
 
@@ -90,15 +102,14 @@ let bandName = "Nirvana"
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
 
-
-
+//Represent it in a dictionary that had the letter grade string for a key and the value as the average (add all the grades together and divide by the count of grades). A String - Int dictionary
 
 
 
 
 
 /*: question8
- ### 8. Create a _constant_ dictionary to store the exam results described in Question 8. This dictionary should be of type `[Int: String]`. Here are the results you can use:
+ ### 8. Create a _constant_ dictionary to store the exam results described in Question 7. This dictionary should be of type `[Int: String]`. Here are the results you can use:
 
  * Grade 9: B
  * Grade 10: A
@@ -107,7 +118,7 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+let exams = [9: "B", 10:"A", 11:"C", 12:"B"]
 
 
 
@@ -120,7 +131,10 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+for (key, value) in exams{
+    
+    print("Grade \(key) got \(value)")
+}
 
 
 
@@ -131,6 +145,13 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+for (key, value) in exams{
+    
+    if value == "A"{
+        
+    print("Grade \(key) got the highest score with \(value)")
+    }
+}
 
 
 
