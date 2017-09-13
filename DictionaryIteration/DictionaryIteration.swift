@@ -34,7 +34,8 @@ class DictionaryIteration {
     func bestSellers() -> String {
         var sentence = ""
         for band in bands {
-            sentence = "\(band.key)'s top-selling album was \(band.value)."
+            let newSentence = "\(band.key)'s top-selling album was \(band.value)."
+            sentence = sentence + newSentence + " "
         }
         return sentence
     }
@@ -50,11 +51,15 @@ class DictionaryIteration {
     
     // Question #8
     func highestGrade(_ grades: [Int : String]) -> Int {
-        var highestGrade = grades.first?.value
-        var highestScoringGrade = grades.first?.key
+        var highestMark = String()
+        var highestGrade = Int()
+        
         for grade in grades {
-            
+            if highestMark == String() || grade.value < highestMark {
+                highestMark = grade.value
+                highestGrade = grade.key
+            }
         }
-        return highestScoringGrade
+        return highestGrade
     }
 }
